@@ -69,11 +69,11 @@
     <section id="projects">
       <h2>Projects</h2>
       <div class="projects-grid">
-        <div class="project" data-category="all">
+        <div class="project project-card" data-title="Interview Performance & Prediction Analysis" data-description="This project uses AI-based analysis of audio features and Natural Language Processing (NLP) to evaluate job candidates during interviews. The system provides recruiters with data-driven insights to help make more objective hiring decisions.">
           <h3>Interview Performance & Prediction Analysis</h3>
           <p>AI-based interview analysis using audio features & NLP to evaluate candidates and provide recruiter insights.</p>
         </div>
-        <div class="project" data-category="all">
+        <div class="project project-card" data-title="Symmetric Algorithm Comparison (AES vs DES)" data-description="A detailed comparative study of AES and DES symmetric encryption algorithms. This project analyzed the algorithms based on performance metrics like speed and throughput, as well as their architectural complexity and overall security against common cryptographic attacks.">
           <h3>Symmetric Algorithm Comparison (AES vs DES)</h3>
           <p>Analyzed and compared AES/DES for secure data communication in terms of speed, complexity, and security.</p>
         </div>
@@ -126,10 +126,18 @@
     </section>
 
     <section id="contact">
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:sirishapaidi02@gmail.com">sirishapaidi02@gmail.com</a></p>
-        <p>Phone: +91 9398329429</p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/paidi-sirisha" target="_blank">paidi-sirisha</a></p>
+        <h2>Contact Me</h2>
+        <p>Have a question or want to work together? Send me a message!</p>
+        <!-- 
+          IMPORTANT: To make this form work, you need to sign up for a free account at https://formspree.io/
+          and replace the placeholder URL below with your own Formspree endpoint URL.
+        -->
+        <form id="contact-form" class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
     </section>
   </main>
 
@@ -139,6 +147,14 @@
     </div>
     <p>&copy; 2025 Paidi Sirisha | All Rights Reserved</p>
   </footer>
+
+  <div id="project-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-button">&times;</span>
+      <h3 id="modal-title"></h3>
+      <p id="modal-description"></p>
+    </div>
+  </div>
 
   <a href="#" id="back-to-top" class="back-to-top" aria-label="Back to top">&uarr;</a>
 

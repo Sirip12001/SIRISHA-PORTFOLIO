@@ -1,111 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Paidi Sirisha | Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paidi Sirisha | Portfolio</title>
+  <meta name="description" content="Portfolio of Paidi Sirisha, a Web Developer, AI Workflow Automation specialist, and Software Engineer.">
+  <meta name="keywords" content="Paidi Sirisha, portfolio, developer, web developer, AI, automation, software engineer, react, python">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="style.css?v=1.2">
 </head>
 <body>
 
-    <!-- Navigation -->
-    <header>
-        <div class="logo">Paidi Sirisha</div>
-        <nav id="navMenu">
-            <a href="#about">About</a>
-            <a href="#experience">Experience</a>
-            <a href="#projects">Projects</a>
-            <a href="#skills">Skills</a>
-            <a href="#certifications">Certifications</a>
-            <a href="#education">Education</a>
-            <a href="#contact">Contact</a>
-        </nav>
-        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-    </header>
+  <header class="main-header">
+    <div class="logo">Paidi Sirisha</div>
+    <button class="mobile-nav-toggle" id="mobile-nav-toggle" aria-label="Menu">
+      <span class="hamburger"></span>
+    </button>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#certifications">Certifications</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="theme-switcher">
+      <input type="checkbox" id="theme-toggle" class="theme-toggle-checkbox">
+      <label for="theme-toggle" class="theme-toggle-label"></label>
+    </div>
+  </header>
 
-    <!-- About Section -->
-    <section id="about">
-        <img src="assets/profile.jpg" alt="Profile" class="profile-pic">
+  <main>
+    <section id="hero">
+      <div class="hero-content">
         <h1>Paidi Sirisha</h1>
-        <h3>Web Developer | AI Workflow Automation | Software Engineer</h3>
-        <p>
-            I’m looking for an opportunity to work in a forward-thinking company where I can apply 
-            the skills I’ve gained in web development, AI automation, and software engineering. 
-            I’ve built web applications, worked on AI workflows, and have hands-on experience 
-            with React JS, Python, SQL, and GitHub.
-        </p>
+        <p class="hero-summary">Web Developer | AI Workflow Automation | Software Engineer</p>
+      </div>
     </section>
 
-    <!-- Experience -->
+    <section id="about">
+      <h2>About Me</h2>
+      <p>
+        I’m looking for an opportunity to work in a forward-thinking company where I can apply 
+        the skills I’ve gained in web development, AI automation, and software engineering. 
+        I’ve built web applications, worked on AI workflows, and have hands-on experience 
+        with React JS, Python, SQL, and GitHub.
+      </p>
+    </section>
+
     <section id="experience">
-        <h2>Experience</h2>
-        <div class="exp-card">
-            <h3>AI Workflow Optimization Specialist</h3>
-            <span class="date">Jan 2025 – Present</span>
-            <ul>
-                <li>Developed and fine-tuned prompts to enhance AI bot performance on FastBots.</li>
-                <li>Built internal tools to streamline processes and reduce bottlenecks.</li>
-                <li>Automated workflows reduced manual data entry by <b>70%</b> and increased processing efficiency by <b>30%</b>.</li>
-            </ul>
-        </div>
+      <h2>Experience</h2>
+      <div class="job">
+        <h3>AI Workflow Optimization Specialist</h3>
+        <p class="date">Jan 2025 – Present</p>
+        <ul>
+            <li>Developed and fine-tuned prompts to enhance AI bot performance on FastBots.</li>
+            <li>Built internal tools to streamline processes and reduce bottlenecks.</li>
+            <li>Automated workflows reduced manual data entry by <b>70%</b> and increased processing efficiency by <b>30%</b>.</li>
+        </ul>
+      </div>
     </section>
 
-    <!-- Projects -->
     <section id="projects">
-        <h2>Projects</h2>
-        <div class="project">
-            <h3>Interview Performance & Prediction Analysis</h3>
-            <p>AI-based interview analysis using audio features & NLP to evaluate candidates and provide recruiter insights.</p>
+      <h2>Projects</h2>
+      <div class="projects-grid">
+        <div class="project" data-category="all">
+          <h3>Interview Performance & Prediction Analysis</h3>
+          <p>AI-based interview analysis using audio features & NLP to evaluate candidates and provide recruiter insights.</p>
         </div>
-        <div class="project">
-            <h3>Symmetric Algorithm Comparison (AES vs DES)</h3>
-            <p>Analyzed and compared AES/DES for secure data communication in terms of speed, complexity, and security.</p>
+        <div class="project" data-category="all">
+          <h3>Symmetric Algorithm Comparison (AES vs DES)</h3>
+          <p>Analyzed and compared AES/DES for secure data communication in terms of speed, complexity, and security.</p>
         </div>
+      </div>
     </section>
 
-    <!-- Skills -->
     <section id="skills">
-        <h2>Skills</h2>
-        <ul>
-            <li>HTML, CSS, JavaScript</li>
-            <li>Python, Java</li>
-            <li>React JS</li>
-            <li>SQL</li>
-            <li>GitHub</li>
-        </ul>
+      <h2>Technical Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-category">
+          <h3>Web Development</h3>
+          <ul><li>HTML, CSS, JavaScript</li><li>React JS</li></ul>
+        </div>
+        <div class="skill-category">
+          <h3>Programming</h3>
+          <ul><li>Python, Java</li></ul>
+        </div>
+        <div class="skill-category">
+          <h3>Databases</h3>
+          <ul><li>SQL</li></ul>
+        </div>
+        <div class="skill-category">
+          <h3>Version Control</h3>
+          <ul><li>GitHub</li></ul>
+        </div>
+      </div>
     </section>
 
-    <!-- Certifications -->
     <section id="certifications">
-        <h2>Certifications</h2>
-        <ul>
-            <li>Introduction to Prompt Engineering for Generative AI</li>
-            <li>AWS Cloud Foundations – AWS Academy</li>
-        </ul>
+      <h2>Certifications</h2>
+      <div class="certification">
+        <h3>Introduction to Prompt Engineering for Generative AI</h3>
+      </div>
+      <div class="certification">
+        <h3>AWS Cloud Foundations – AWS Academy</h3>
+      </div>
     </section>
 
-    <!-- Education -->
     <section id="education">
         <h2>Education</h2>
-        <ul>
-            <li><b>B.Tech IT</b> – GMR Institute of Technology (2019–2023) | CGPA: 8.27</li>
-            <li>Intermediate MPC – Sri Chaitanya Junior College (2017–2019) | CGPA: 9.32</li>
-            <li>SSC – S.V.V.M. High School Ragolu (2017) | CGPA: 9.0</li>
-        </ul>
+        <div class="certification">
+            <h3><b>B.Tech IT</b> – GMR Institute of Technology (2019–2023) | CGPA: 8.27</h3>
+        </div>
+        <div class="certification">
+            <h3>Intermediate MPC – Sri Chaitanya Junior College (2017–2019) | CGPA: 9.32</h3>
+        </div>
+        <div class="certification">
+            <h3>SSC – S.V.V.M. High School Ragolu (2017) | CGPA: 9.0</h3>
+        </div>
     </section>
 
-    <!-- Contact -->
     <section id="contact">
         <h2>Contact</h2>
         <p>Email: <a href="mailto:sirishapaidi02@gmail.com">sirishapaidi02@gmail.com</a></p>
         <p>Phone: +91 9398329429</p>
         <p>LinkedIn: <a href="https://www.linkedin.com/in/paidi-sirisha" target="_blank">paidi-sirisha</a></p>
     </section>
+  </main>
 
-    <footer>
-        <p>© 2025 Paidi Sirisha | All Rights Reserved</p>
-    </footer>
+  <footer>
+    <div class="social-links">
+      <a href="https://www.linkedin.com/in/paidi-sirisha" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+    </div>
+    <p>&copy; 2025 Paidi Sirisha | All Rights Reserved</p>
+  </footer>
 
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

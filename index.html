@@ -27,6 +27,7 @@
         <li><a href="#certifications">Certifications</a></li>
         <li><a href="#education">Education</a></li>
         <li><a href="#contact">Contact</a></li>
+        <li><a href="assets/Paidi_Sirisha_Resume.pdf" class="btn btn-resume" download>Resume</a></li>
       </ul>
     </nav>
     <div class="theme-switcher">
@@ -68,12 +69,17 @@
 
     <section id="projects">
       <h2>Projects</h2>
+      <div class="project-filters">
+        <button class="filter-btn is-active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="ai">AI/ML</button>
+        <button class="filter-btn" data-filter="security">Security</button>
+      </div>
       <div class="projects-grid">
-        <div class="project project-card" data-title="Interview Performance & Prediction Analysis" data-description="This project uses AI-based analysis of audio features and Natural Language Processing (NLP) to evaluate job candidates during interviews. The system provides recruiters with data-driven insights to help make more objective hiring decisions.">
+        <div class="project project-card" data-category="ai" data-title="Interview Performance & Prediction Analysis" data-description="This project uses AI-based analysis of audio features and Natural Language Processing (NLP) to evaluate job candidates during interviews. The system provides recruiters with data-driven insights to help make more objective hiring decisions." data-live-url="https://example.com">
           <h3>Interview Performance & Prediction Analysis</h3>
           <p>AI-based interview analysis using audio features & NLP to evaluate candidates and provide recruiter insights.</p>
         </div>
-        <div class="project project-card" data-title="Symmetric Algorithm Comparison (AES vs DES)" data-description="A detailed comparative study of AES and DES symmetric encryption algorithms. This project analyzed the algorithms based on performance metrics like speed and throughput, as well as their architectural complexity and overall security against common cryptographic attacks.">
+        <div class="project project-card" data-category="security" data-title="Symmetric Algorithm Comparison (AES vs DES)" data-description="A detailed comparative study of AES and DES symmetric encryption algorithms. This project analyzed the algorithms based on performance metrics like speed and throughput, as well as their architectural complexity and overall security against common cryptographic attacks." data-live-url="#">
           <h3>Symmetric Algorithm Comparison (AES vs DES)</h3>
           <p>Analyzed and compared AES/DES for secure data communication in terms of speed, complexity, and security.</p>
         </div>
@@ -132,7 +138,7 @@
           IMPORTANT: To make this form work, you need to sign up for a free account at https://formspree.io/
           and replace the placeholder URL below with your own Formspree endpoint URL.
         -->
-        <form id="contact-form" class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <form id="contact-form" class="contact-form" action="https://formspree.io/f/PASTE_YOUR_FORM_ID_HERE" method="POST">
             <input type="text" name="name" placeholder="Your Name" required>
             <input type="email" name="email" placeholder="Your Email" required>
             <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
@@ -153,6 +159,9 @@
       <span class="close-button">&times;</span>
       <h3 id="modal-title"></h3>
       <p id="modal-description"></p>
+      <div class="modal-links">
+        <a href="#" id="modal-link-live" class="btn" target="_blank" rel="noopener noreferrer">Live Demo</a>
+      </div>
     </div>
   </div>
 

@@ -109,4 +109,58 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   }
+
+  // Project Modal Logic
+  const modal = document.getElementById('project-modal');
+  const modalTitle = document.getElementById('modal-title');
+  const modalDescription = document.getElementById('modal-description');
+  const closeButton = document.querySelector('.close-button');
+  const projectCards = document.querySelectorAll('.project-card');
+
+  if (modal && closeButton && projectCards.length > 0) {
+    projectCards.forEach(card => {
+      card.addEventListener('click', () => {
+        const title = card.getAttribute('data-title');
+        const description = card.getAttribute('data-description');
+        
+        modalTitle.textContent = title;
+        modalDescription.textContent = description;
+        
+        modal.classList.add('is-visible');
+      });
+    });
+
+    const closeModal = () => {
+      modal.classList.remove('is-visible');
+    };
+
+    closeButton.addEventListener('click', closeModal);
+
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        closeModal();
+      }
+    });
+  }
+
+  // Back to Top Button
+  const backToTopButton = document.getElementById('back-to-top');
+
+  if (backToTopButton) {
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        backToTopButton.classList.add('is-visible');
+      } else {
+        backToTopButton.classList.remove('is-visible');
+      }
+    });
+
+    backToTopButton.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  }
 });
